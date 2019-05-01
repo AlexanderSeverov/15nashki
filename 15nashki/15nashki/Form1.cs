@@ -27,8 +27,10 @@ namespace _15nashki
             game.smeshen(position);
             refresh();
             if (game.maybeWin())
+            {
                 MessageBox.Show("Победил");
-
+                startGame();
+            }
         }
 
         private Button backButton(int position)
@@ -66,7 +68,7 @@ namespace _15nashki
         {
             game.zapoln();
 
-            for (int j = 0; j < 3; j++)
+            for (int j = 0; j < 100; j++)
                 game.smeshmnoghod();
 
             refresh();
