@@ -10,6 +10,7 @@ namespace _15nashki
     {
         int size;
         int[,] map;
+        int emptyX, emptyY;
 
         public GameProc(int size)
         {
@@ -28,9 +29,24 @@ namespace _15nashki
             for (int x = 0; x < size; x++)
                 for (int y = 0; y < size; y++)
                     map[x, y] = coordTOposition(x, y) + 1;
+            emptyX = size - 1;
+            emptyY = size - 1;
+            map =[emptyX, emptyY] = 0;
         }
 
+        public int facingNum(int position)
+        {
+            int x, y;
+            positionTOcoord(position, out x,out y);
 
+            if (x < 0 || x >= size)
+                return 0;
+            if (y < 0 || y >= size)
+                return 0;
+
+            return map[x, y];
+
+        }
 
         private int coordTOposition(int x,int y)
         {

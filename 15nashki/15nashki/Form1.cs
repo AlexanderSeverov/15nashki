@@ -48,5 +48,10 @@ namespace _15nashki
                 default:return null;
             }
         }
+
+        private void startTryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
