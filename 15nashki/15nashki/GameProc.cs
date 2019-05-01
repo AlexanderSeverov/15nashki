@@ -85,6 +85,20 @@ namespace _15nashki
             return map[x, y];
 
         }
+        
+        public bool maybeWin()
+        {
+            if (!(emptyX==size -1 && emptyY==size-1))
+                return false;
+
+            for (int x = 0; x < size; x++)
+                for (int y = 0; y < size; y++)
+                    if (!(x == size - 1 && y == size - 1))          
+                     if (map[x, y] != coordTOposition(x, y) + 1)
+                        return false;
+
+            return true;
+        }
 
         private int coordTOposition(int x,int y)
         {
@@ -102,6 +116,12 @@ namespace _15nashki
 
         private void positionTOcoord(int position, out int x,out int y)
         {
+            if (position < 0)
+                position = 0;
+
+            if (position > size * size - 1)
+                position = size - 1;
+
             x = position % size;
             y = position / size;
         }

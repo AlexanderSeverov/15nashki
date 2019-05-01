@@ -26,6 +26,8 @@ namespace _15nashki
             //MessageBox.Show(position.ToString());
             game.smeshen(position);
             refresh();
+            if (game.maybeWin())
+                MessageBox.Show("Победил");
 
         }
 
@@ -64,7 +66,7 @@ namespace _15nashki
         {
             game.zapoln();
 
-            for (int j = 0; j < 100; j++)
+            for (int j = 0; j < 3; j++)
                 game.smeshmnoghod();
 
             refresh();
