@@ -1,0 +1,9 @@
+C:\Users\АлександрСевер\Documents\Visual Studio 2015\Projects\15nashki\15nashki\bin\Debug\15nashki.exe.config
+C:\Users\АлександрСевер\Documents\Visual Studio 2015\Projects\15nashki\15nashki\bin\Debug\15nashki.exe
+C:\Users\АлександрСевер\Documents\Visual Studio 2015\Projects\15nashki\15nashki\bin\Debug\15nashki.pdb
+C:\Users\АлександрСевер\Documents\Visual Studio 2015\Projects\15nashki\15nashki\obj\Debug\15nashki.csprojResolveAssemblyReference.cache
+C:\Users\АлександрСевер\Documents\Visual Studio 2015\Projects\15nashki\15nashki\obj\Debug\_15nashki.Form1.resources
+C:\Users\АлександрСевер\Documents\Visual Studio 2015\Projects\15nashki\15nashki\obj\Debug\_15nashki.Properties.Resources.resources
+C:\Users\АлександрСевер\Documents\Visual Studio 2015\Projects\15nashki\15nashki\obj\Debug\15nashki.csproj.GenerateResource.Cache
+C:\Users\АлександрСевер\Documents\Visual Studio 2015\Projects\15nashki\15nashki\obj\Debug\15nashki.exe
+C:\Users\АлександрСевер\Documents\Visual Studio 2015\Projects\15nashki\15nashki\obj\Debug\15nashki.pdb
