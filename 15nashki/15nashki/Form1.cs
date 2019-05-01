@@ -12,9 +12,11 @@ namespace _15nashki
 {
     public partial class Form1 : Form
     {
+        GameProc game;
         public Form1()
         {
             InitializeComponent();
+            game = new GameProc(4);
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -22,6 +24,8 @@ namespace _15nashki
             int position = Convert.ToInt16(((Button)sender).Tag);
 
             //MessageBox.Show(position.ToString());
+            game.smeshen(position);
+            refresh();
 
         }
 
@@ -48,10 +52,30 @@ namespace _15nashki
                 default:return null;
             }
         }
-
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            startGame();
+        }
         private void startTryToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            startGame();
         }
+        private void startGame()
+        {
+            game.zapoln();
+            refresh();
+        }
+
+        private void refresh()
+        {
+            for(int position = 0;position<16;position++)
+            {
+                int agFN = game.facingNum(position);
+                backButton(position).Text = agFN.ToString();
+                backButton(position).Visible = (agFN > 0);
+            }
+        }
+
+        
     }
 }

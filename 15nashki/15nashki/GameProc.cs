@@ -31,8 +31,18 @@ namespace _15nashki
                     map[x, y] = coordTOposition(x, y) + 1;
             emptyX = size - 1;
             emptyY = size - 1;
-            map =[emptyX, emptyY] = 0;
+            map [emptyX, emptyY] = 0;
         }
+
+        public void smeshen(int position)
+        {
+            int x, y;
+
+            positionTOcoord(position, out x, out y);
+            map[emptyX, emptyY] = map[x, y];
+            map[x, y] = 0;
+        }
+
 
         public int facingNum(int position)
         {
