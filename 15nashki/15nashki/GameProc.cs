@@ -11,13 +11,14 @@ namespace _15nashki
         int size;
         int[,] map;
         int emptyX, emptyY;
+        static Random rand = new Random();
 
         public GameProc(int size)
         {
-            if (size < 2)
-                size = 2;
-            if (size > 5)
-                size = 5;
+        //    if (size < 2)
+        //        size = 2;
+        //    if (size > 5)
+        //        size = 5;
 
             this.size = size;
             map = new int [size, size];
@@ -34,13 +35,40 @@ namespace _15nashki
             map [emptyX, emptyY] = 0;
         }
 
+        public void smeshmnoghod()
+        {
+            //   smeshen(rand.Next(0, size * size));
+
+            int a = rand.Next(0, 4);
+            int x = emptyX;
+            int y = emptyY;
+
+            switch(a)
+            {
+                case 0: x--;break;
+                case 1: x++;break;
+                case 2: y--;break;
+                case 3: y++;break;
+            }
+
+            smeshen(coordTOposition(x, y));
+        }
+
+
         public void smeshen(int position)
         {
             int x, y;
 
             positionTOcoord(position, out x, out y);
+
+            if (Math.Abs(emptyX-x)+Math.Abs(emptyY-y)!=1)
+            {
+                return;
+            }
             map[emptyX, emptyY] = map[x, y];
             map[x, y] = 0;
+            emptyX = x;
+            emptyY = y;
         }
 
 
@@ -60,6 +88,15 @@ namespace _15nashki
 
         private int coordTOposition(int x,int y)
         {
+            if (x < 0)
+                x = 0;
+
+            if (x > size - 1)
+                x = size - 1;
+
+            if (y > size - 1)
+                y = size - 1;
+
             return y * size + x;
         }
 

@@ -63,6 +63,10 @@ namespace _15nashki
         private void startGame()
         {
             game.zapoln();
+
+            for (int j = 0; j < 100; j++)
+                game.smeshmnoghod();
+
             refresh();
         }
 
